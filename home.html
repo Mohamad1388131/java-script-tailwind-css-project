@@ -243,29 +243,31 @@
         logInPage.classList.add("right-0");
         logInPage.classList.add("left-0");
       }
-      function logInFinished(e) {
-        if (userGmail.value === "") {
-          userGmail.classList.remove("bg-white");
-          userGmail.classList.add("bg-black");
-        }
-        if (userGmail.value === "") return;
-        if (userPassword.value.trim() === "") {
-          userPassword.classList.remove("bg-white");
-          userPassword.classList.add("bg-black");
-        }
-        if (userPassword.value.trim() === "") return;
-        let userInfo = {
-          gmail: userGmail.value,
-          password: userPassword.value.trim(),
-        };
-        localStorage.setItem(user, JSON.stringify(userInfo));
-        getBack();
-      }
       function getBack() {
         logInPage.classList.add("-right-full");
         logInPage.classList.add("left-full");
         logInPage.classList.remove("right-0");
         logInPage.classList.remove("left-0");
+      }
+      function logInFinished() {
+        if (userGmail.value === "") {
+          userGmail.classList.remove("bg-white");
+          userGmail.classList.add("bg-black");
+          userGmail.classList.add("text-white");
+        }
+        if (userGmail.value === "") return;
+        if (userPassword.value.trim() === "") {
+          userPassword.classList.remove("bg-white");
+          userPassword.classList.add("bg-black");
+          userPassword.classList.add("text-white");
+        }
+        if (userPassword.value.trim() === "") return;
+        getBack();
+        let userInfo = {
+          gmail: userGmail.value,
+          password: userPassword.value.trim(),
+        };
+        localStorage.setItem(user, JSON.stringify(userInfo));
       }
       function getProduct() {
         fetch("https://fakestoreapi.com/products")
