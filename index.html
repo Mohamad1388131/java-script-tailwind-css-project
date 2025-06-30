@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body class="relative overflow-x-hidden">
+    <header class="bg-red-500 py-1 mb-2">
+      <div
+        class="w-full flex justify-around items-center flex-col md:flex-row bg-red-700 text-white font-bold"
+      >
+        <div class="md:w-5/12 w-full h-full flex justify-around items-center">
+          <ul class="flex flex-row justify-around items-center w-full">
+            <li
+              class="md:py-3 lg:p-3 hover:bg-red-800 hover:text-black duration-500 ease-linear transition"
+            >
+              Why us?
+            </li>
+            <li
+              class="md:py-3 lg:p-3 hover:bg-red-800 hover:text-black duration-500 ease-linear transition"
+            >
+              About us?
+            </li>
+            <li
+              class="md:py-3 lg:p-3 hover:bg-red-800 hover:text-black duration-500 ease-linear transition"
+            >
+              This site?
+            </li>
+            <li
+              class="md:py-3 lg:p-3 hover:bg-red-800 hover:text-black duration-500 ease-linear transition"
+            >
+              Name?
+            </li>
+          </ul>
+        </div>
+        <div
+          class="md:w-7/12 md:flex-row flex justify-around items-center flex-col h-full"
+        >
+          <div class="md:w-4/12 flex justify-around items-center w-full">
+            <span class="md:py-3 lg:p-3 w-2/6">Phone:</span>
+            <span class="md:py-3 lg:p-3 w-4/6">09917836621</span>
+          </div>
+          <div class="md:w-8/12 flex justify-around items-center w-full">
+            <span class="md:py-3 lg:p-3 w-2/6 md:w-1/6">Gmail:</span>
+            <span class="md:py-3 lg:p-3 w-4/6 md:w-5/6"
+              >mohammadghahremanzad@gmail.com</span
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav id="Nav" class="h-12 bg-red-400 w-full">
+      <ul
+        class="h-12 w-full flex justify-around items-center-center md:text-2xl font-black text-shadow-2xs text-shadow-red-50"
+      >
+        <li class="py-2">Man Clothing</li>
+        <li class="py-2">Woman Clothing</li>
+        <li class="py-2">Electronic</li>
+        <li class="py-2">Jewelery</li>
+      </ul>
+    </nav>
+    <section class="w-full h-24 mt-4">
+      <button
+        onclick="logPage()"
+        class="bg-red-500 p-1.5 rounded-2xl hover:bg-red-800 hover:text-white shadow-lg hover:shadow-black m-5 duration-500 ease-linear transition"
+      >
+        sign in/log in
+      </button>
+      <div
+        id="logInPage"
+        class="bg-black fixed top-0 -right-full left-full h-screen flex justify-center items-center"
+      >
+        <div class="h-screen w-full relative flex justify-center items-center">
+          <div class="absolute h-screen w-full" onclick="getBack()"></div>
+          <div class="bg-white rounded-3xl p-2 inline-block h-1/2 w-1/2 z-10">
+            <div
+              action=""
+              class="bg-red-500 w-full h-full rounded-2xl p-2 border-2 border-dashed border-black flex flex-col justify-between"
+            >
+              <div class="flex justify-between items-center">
+                <span class="text-white text-3xl">Gmail:</span
+                ><input
+                  id="Gmail"
+                  type="text"
+                  class="bg-white outline-0 w-full h-8 text-2xl"
+                />
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-white text-3xl">Password:</span
+                ><input
+                  id="Password"
+                  name="userPassword"
+                  type="password"
+                  class="bg-white outline-0 w-full h-8 text-2xl"
+                  autocomplete="iAmNewUser"
+                />
+              </div>
+              <button
+                onclick="logInFinished()"
+                class="bg-red-400 p-1.5 rounded-2xl hover:bg-red-800 hover:text-white shadow-lg hover:shadow-black m-5 self-end duration-500 ease-linear transition"
+              >
+                log in/sign in
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main
+      class="bg-gray-100 flex justify-between items-center md:flex-row flex-col"
+    >
+      <div class="w-2/4 p-2">
+        <img src="./img/7.jpg" alt="photo" />
+      </div>
+      <div>
+        <div class="font-bold text-2xl">M & M</div>
+        <div class="text-white">Mohammad Market</div>
+        <div>
+          M & M market is one of the biggest market in world and it just produce
+          tons of new relation ships by making people see each other by buying
+          new thing.
+        </div>
+      </div>
+    </main>
+    <section
+      class="border-b-2 border-r-2 border-l-2 border-red-400 border-dashed flex justify-between items-center flex-col rounded-2xl p-1 min-h-96 m-2"
+    >
+      <div class="self-start flex justify-around items-center w-full">
+        <input
+          type="text"
+          id="filter"
+          class="bg-red-400 rounded-xs outline-0 w-60 h-8 text-2xl"
+        />
+        <select
+          name="filter"
+          id="filter"
+          class="hover:bg-red-800 hover:text-black duration-500 ease-linear transition outline-0 p-3"
+        >
+          <option value="">Whole</option>
+          <option value="">Women Clothing</option>
+          <option value="">Men Clothing</option>
+          <option value="">Jewelery</option>
+          <option value="">Electronic</option>
+        </select>
+      </div>
+      <div
+        class="h-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1.5 w-full"
+        id="productShowTag"
+      ></div>
+    </section>
+    <footer
+      class="w-full flex justify-between items-center flex-col bg-red-700 text-white text-2xl"
+    >
+      <div
+        class="w-full flex justify-around items-center flex-col lg:flex-row bg-red-500 p-1.5 font-bold m-0 h-max"
+      >
+        <ul
+          class="w-full md:w-1/6 flex justify-around items-center flex-col md:items-start mb-2 h-full"
+        >
+          <li
+            class="hover:bg-red-800 hover:text-black duration-500 ease-linear transition lg:p-3 w-full p-0.5"
+          >
+            Why us?
+          </li>
+          <li
+            class="hover:bg-red-800 hover:text-black duration-500 ease-linear transition lg:p-3 w-full p-0.5"
+          >
+            About us?
+          </li>
+          <li
+            class="hover:bg-red-800 hover:text-black duration-500 ease-linear transition lg:p-3 w-full p-0.5"
+          >
+            Product
+          </li>
+          <li
+            class="hover:bg-red-800 hover:text-black duration-500 ease-linear transition lg:p-3 w-full p-0.5"
+          >
+            Our group
+          </li>
+        </ul>
+        <ul
+          class="w-full md:w-3/6 flex justify-around items-center flex-col md:items-start mb-2 h-full"
+        >
+          <li class="w-full lg:p-3">mohammadghahremanzad@gmail.com</li>
+          <li class="w-full lg:p-3">09917836621</li>
+        </ul>
+        <ul
+          class="w-full md:w-2/6 flex justify-around items-center flex-col md:items-start mb-2 h-full"
+        >
+          <li
+            class="hover:bg-red-800 hover:text-black duration-500 ease-linear transition lg:p-3 w-full p-0.5"
+          >
+            Women Clothing
+          </li>
+          <li
+            class="hover:bg-red-800 hover:text-black duration-500 ease-linear transition lg:p-3 w-full p-0.5"
+          >
+            Man Clothing
+          </li>
+          <li
+            class="hover:bg-red-800 hover:text-black duration-500 ease-linear transition lg:p-3 w-full p-0.5"
+          >
+            Jewelery
+          </li>
+          <li
+            class="hover:bg-red-800 hover:text-black duration-500 ease-linear transition lg:p-3 w-full p-0.5"
+          >
+            Electronic
+          </li>
+        </ul>
+      </div>
+      <div
+        class="flex justify-center items-center p-3.5 h-full font-bold md:text-4xl"
+      >
+        <div>Developed by : Mohammad Ghahremanzad</div>
+      </div>
+    </footer>
+    <script>
+      const nav = document.getElementById("Nav");
+      const logInPage = document.getElementById("logInPage");
+      const userGmail = document.getElementById("Gmail");
+      const userPassword = document.getElementById("Password");
+      const showTag = document.getElementById("productShowTag");
+      const filterProduct = document.getElementById("filter");
+      document.addEventListener("scroll", function (event) {
+        let scrollOffset = window.pageYOffset;
+        if (scrollOffset > 56) {
+          nav.classList.add("fixed");
+          nav.classList.add("top-0");
+        }
+        if (scrollOffset < 56) {
+          nav.classList.remove("fixed");
+          nav.classList.remove("top-0");
+        }
+      });
+      function logPage() {
+        logInPage.classList.remove("-right-full");
+        logInPage.classList.remove("left-full");
+        logInPage.classList.add("right-0");
+        logInPage.classList.add("left-0");
+      }
+      function logInFinished() {
+        if (userGmail.value === "") {
+          userGmail.classList.remove("bg-white");
+          userGmail.classList.add("bg-black");
+        }
+        if (userGmail.value === "") return;
+        if (userPassword.value.trim() === "") {
+          userPassword.classList.remove("bg-white");
+          userPassword.classList.add("bg-black");
+        }
+        if (userPassword.value.trim() === "") return;
+        let userInfo = {
+          gmail: userGmail.value,
+          password: userPassword.value.trim(),
+        };
+        localStorage.setItem(user, JSON.stringify(userInfo));
+        getBack();
+      }
+      function getBack() {
+        logInPage.classList.add("-right-full");
+        logInPage.classList.add("left-full");
+        logInPage.classList.remove("right-0");
+        logInPage.classList.remove("left-0");
+      }
+      function getProduct() {
+        fetch("https://fakestoreapi.com/products")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+          })
+          .then((data) => {
+            showProduct(data);
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+          });
+      }
+      function showProduct(data) {
+        showTag.innerHTML = "";
+        data.forEach((Element) => {
+          showTag.innerHTML += `
+        <div class="border-2 border-solid border-red-200 rounded-2xl duration-500 ease-linear transition hover:border-0 hover:text-white hover:bg-red-400 flex justify-between items-center flex-col pt-0.5" id="${Element.id}">
+          <div class="font-bold">${Element.title}</div>
+          <img class="w-full h-full" src="${Element.image}" alt="${Element.title}">
+          <div class="text-orange-400 font-bold text-2xl">${Element.price}$</div>
+        </div>
+        `;
+        });
+      }
+      window.onload = getProduct();
+    </script>
+  </body>
+</html>
