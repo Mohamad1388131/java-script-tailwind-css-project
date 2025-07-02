@@ -68,7 +68,7 @@ const nav = document.getElementById("Nav");
         showTag.innerHTML = "";
         products.forEach((Element) => {
           showTag.innerHTML += `
-        <a href="./product.html" target="-self" class="group border-2 border-solid border-red-200 rounded-2xl hover:shadow-black duration-500 ease-linear transition hover:border-0 hover:text-white hover:bg-red-400 flex justify-between items-center flex-col py-0.5 col-span-1" onclick="passString(${Element.id})">
+        <a href="./product.html" target="-self" class="group rounded-2xl hover:shadow-black duration-500 ease-linear transition hover:text-white hover:bg-red-400 flex justify-between items-center flex-col py-1 col-span-1" onclick="passString(${Element.id})">
           <div class="duration-500 ease-linear transition font-bold text-black group-hover:text-white line-clamp-2">${Element.title}</div>
           <img class="w-full h-2/4 text-black" src="${Element.image}" alt="${Element.title}">
           <div class="duration-500 ease-linear transition font-bold text-2xl text-orange-400 group-hover:text-white">${Element.price}$</div>
