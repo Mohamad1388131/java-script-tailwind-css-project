@@ -34,7 +34,7 @@
       <div class="font-bold text-3xl md:col-span-2">count:${product.rating.count}</div>
       <div class="font-bold text-amber-400 md:col-span-4 text-4xl">price:${product.price}</div>
       <button onclick="addToCart()" class="bg-green-500 p-1.5 rounded-2xl hover:bg-green-800 hover:text-white shadow-lg hover:shadow-black m-5 duration-500 ease-linear transition md:col-span-2">Add to Cart</button>
-      <a class="bg-red-500 p-1.5 rounded-2xl hover:bg-red-800 hover:text-white shadow-lg hover:shadow-black m-5 duration-500 ease-linear transition md:col-span-2" href="./home.html">Get Back</a>
+      <a class="bg-red-500 p-1.5 rounded-2xl hover:bg-red-800 hover:text-white shadow-lg hover:shadow-black m-5 duration-500 ease-linear transition md:col-span-2 flex justify-center items-center" href="./home.html">Get Back</a>
         `;
       }
       function  addToCart(){
